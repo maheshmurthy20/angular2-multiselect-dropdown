@@ -23,7 +23,6 @@ $base-color: #0079FE;
         float: left;
         padding: 0px;
         margin: 0px;
-        width: calc(100% - 20px);
         .c-token{
             list-style: none;  
             padding: 0px 5px;
@@ -31,7 +30,6 @@ $base-color: #0079FE;
             color: #fff;
             border-radius: 2px;
             margin-right: 4px;
-            margin-top: 2px;
             float: left;
             .c-label{
                 display: block;
@@ -52,22 +50,13 @@ $base-color: #0079FE;
         font-size: 15pt;
         position: absolute;
         right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .countplaceholder {
-        position: absolute;
-        right: 30px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 25%;
     }
     .c-btn{
         width: 100%;
         box-shadow: 0px 1px 5px #959595;
         padding: 10px;
         cursor: pointer;
-        display: flex;
-        position: relative;
     }
 }
 .dropdown-list{
@@ -95,14 +84,14 @@ $base-color: #0079FE;
             background: #f5f5f5;
         }
     }
-    ::-webkit-scrollbar{
+    ul::-webkit-scrollbar{
         width: 8px;
     }
-    ::-webkit-scrollbar-thumb{
+    ul::-webkit-scrollbar-thumb{
         background: #cccccc;
         border-radius: 5px;
     }
-    ::-webkit-scrollbar-track{
+    ul::-webkit-scrollbar-track{
         background: #f2f2f2;
     }
 }
@@ -115,10 +104,6 @@ $base-color: #0079FE;
   margin-left: 15px;
   position: absolute;
   top: 0;
-}
-.arrow-2{
-    border-bottom: 15px solid #ccc;
-    top: -1px;
 }
 .list-area{
     border: 1px solid #ccc;
@@ -178,7 +163,6 @@ $base-color: #0079FE;
   cursor: pointer;
   margin: 0px;
   color: #000;
-  font-weight: 300;
 }
 .pure-checkbox input[type="checkbox"] + label:before{
   box-sizing: content-box;
@@ -237,6 +221,7 @@ $base-color: #0079FE;
   transition: transform 200ms ease-out;
 }
 .pure-checkbox input[type="radio"]:checked + label:before{
+  animation: borderscale 300ms ease-in;
   background-color: white;
 }
 .pure-checkbox input[type="radio"]:checked + label:after{
@@ -246,23 +231,17 @@ $base-color: #0079FE;
   border-radius: 50%;
 }
 .pure-checkbox input[type="checkbox"]:checked + label:before{
+  animation: borderscale 200ms ease-in;
   background: $base-color;
 }
 .pure-checkbox input[type="checkbox"]:checked + label:after{
   transform: rotate(-45deg) scale(1);
 }
+@keyframes borderscale {
+  50% {
+    box-shadow: 0 0 0 2px $base-color;
+  }
+}
 .list-message{
     text-align: center;
-}
-.list-grp{
-    padding: 0 15px !important;
-}
-.list-grp h4 {
-    text-transform: capitalize;
-    margin: 15px 0px 0px 0px;
-    font-size: 14px;
-    font-weight: 700;
-}
-.list-grp > li {
-    padding-left: 15px !important;
 }

@@ -5,15 +5,10 @@ export interface DropdownSettings{
     selectAllText: String;
     unSelectAllText: String;
     enableSearchFilter: Boolean;
-    maxHeight: number;
+    maxHeight: Number;
     badgeShowLimit: Number;
     classes: String;
     limitSelection?: Number;
     disabled?: Boolean;
     searchPlaceholderText: String;
-    groupBy?: String;
-    showCheckbox?: Boolean;
-    noDataLabel: string;
-    searchAutofocus?: boolean;
-    lazyLoading?: boolean;
 } 
